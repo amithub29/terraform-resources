@@ -7,4 +7,5 @@
 - `terraform apply -auto-approve`: Applies the changes without asking for confirmation.
 - `terraform destroy`: Destroys the Terraform-managed infrastructure.
 - `terraform destroy -target aws_instance.myec2`: Destroy specific resource.
-
+- `terraform console`: Interactive command line utility to test functions.
+- `terraform refresh`: Fetches the current state of infrastructure and update the state file.
