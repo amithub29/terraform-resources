@@ -12,3 +12,11 @@
 - `terraform apply -auto-approve`: Applies the changes without asking for confirmation.
 - `terraform apply -replace aws_instance.myec2`: Replace specific resource.
 - `terraform destroy -target aws_instance.myec2`: Destroys specific resource.
+
+## Terraform State Commands
+
+- `terraform state list`: Lists all resources managed by Terraform.
+- `terraform state show aws_instance.myec2`: Shows the attributes of a resource in the state.
+- `terraform state pull`: Pulls the state file from a remote backend.
+- `terraform state rm aws_instance.myec2`: Removes resource from state without destroying it.
+- `terraform state mv aws_instance.myec2 aws_instance.ec2-dev`: Renames the logical name of the resource in state file.  
