@@ -12,6 +12,7 @@
 - `terraform apply -auto-approve`: Applies the changes without asking for confirmation.
 - `terraform apply -replace aws_instance.myec2`: Replace specific resource.
 - `terraform destroy -target aws_instance.myec2`: Destroys specific resource.
+- `terraform import aws_instance.myec2 id-xxxxxxxxx`: Imports the existing resources in state file.
 
 ## Terraform State Commands
 
