@@ -8,13 +8,3 @@ resource "aws_vpc" "vpc" {
   tags = var.vpc_tags
 }
 
-resource "aws_subnet" "subnet" {
-  vpc_id     = aws_vpc.vpc.id
-
-  for_each = 
-  cidr_block = var.subnet_cidr
-
-  tags = {
-    Name = "Main"
-  }
-}
