@@ -1,3 +1,8 @@
+variable "project_name" {
+  description = "Resources' tag will be based on this name"
+  type = string
+}
+
 variable "cidr" {
   description = "VPC CIDR"
   type = string
