@@ -15,7 +15,7 @@ locals {
   bit_list = [ for i in range(7) : i if pow(2, i) > local.total_subnet ]
   min_bit = local.bit_list[0]
   public_subnet_cidr = [ for i in range(var.public_subnet_count) : cidrsubnet(local.usable_cidr_block, local.min_bit, i) ]
-  private_subnet_cidr = [ for i in range(var.private_subnet_count) : cidrsubnet(local.usable_cidr_block, local.min_bit, i + var.var.public_subnet_count) ]
+  private_subnet_cidr = [ for i in range(var.private_subnet_count) : cidrsubnet(local.usable_cidr_block, local.min_bit, i + var.public_subnet_count) ]
 
 }
 
