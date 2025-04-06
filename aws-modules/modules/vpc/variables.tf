@@ -31,3 +31,36 @@ variable "dns_hostnames" {
   default = true
 }
 
+variable "public_subnet_count" {
+  description = "Number of public subnets"
+  type = number
+  default = 2
+}
+
+variable "private_subnet_count" {
+  description = "Number of private subnets"
+  type = number
+  default = 2
+}
+
+variable "public_subnet_az_names" {
+  description = "Preffered availability zones for public subnet"
+  type = list(string)
+  default = []
+  validation {
+    condition = length(var.public_subnet_az_names) <= var.public_subnet_count
+    error_message = "Specified AZs can't be more than number of public subnets"
+  }
+}
+
+variable "private_subnet_az_names" {
+  description = "Preffered availability zones for private subnet"
+  type = list(string)
+  default = []
+  validation {
+    condition = length(var.private_subnet_az_names) <= var.private_subnet_count
+    error_message = "Specified AZs can't be more than number of private subnets"
+  }
+}
+
+
